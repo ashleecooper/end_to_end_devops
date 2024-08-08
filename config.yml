@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/base:stretch # You can choose a base image that suits your application
+      - image: docker:stable # You can choose a base image that suits your application
 
     steps:
       - checkout
