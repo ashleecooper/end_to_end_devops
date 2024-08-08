@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/python:3.8 # You can choose a base image that suits your application
+      - image: cimg/base:stretch # You can choose a base image that suits your application
 
     steps:
       - checkout
