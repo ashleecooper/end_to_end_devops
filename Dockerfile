@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-MAINTAINER ashleecooper <ashleedolan1@yahoo.com>
+MAINTAINER username <email@yahoo.com>
 
 WORKDIR /usr/apps/hello-docker/
 
