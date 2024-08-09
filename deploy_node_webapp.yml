@@ -14,25 +14,25 @@
           apiVersion: apps/v1
           kind: ReplicaSet
           metadata:
-            name: webapp
+            name: xxxxxx
             namespace: default
           spec:
             replicas: 2
             selector:
               matchLabels:
-                app: node-webapp
+                app: xxxxxx
             template:
               metadata:
                 labels:
-                  app: node-webapp
+                  app: xxxxxx
               spec:
                 containers:
-                - name: springapp
-                  image: 403959134869.dkr.ecr.ap-south-1.amazonaws.com/nodeapp
+                - name: xxxxxx
+                  image: xxxxxx
                   ports:
                   - containerPort: 8080
                 imagePullSecrets:
-                - name: ap-south-1-ecr-registry
+                - name: xxxxxx
 
     - name: Create a Service to access spring app
       k8s:
@@ -41,7 +41,7 @@
           apiVersion: v1
           kind: Service
           metadata:
-            name: hello-node-webapp
+            name: xxxxx
             namespace: default
           spec:
             type: NodePort
@@ -50,4 +50,4 @@
               nodePort: 30003
               protocol: TCP
             selector:
-              app: node-webapp
+              app: xxxxxx
