@@ -1,15 +1,15 @@
 # RUN me where kubectl is available,& make sure to replace account,region etc
 #
-ACCOUNT=654654208509
+ACCOUNT=xxxx
 REGION=us-east-1
-SECRET_NAME=${REGION}-ecr-registry
-EMAIL=ashleedolan1@yahoo.com
+SECRET_NAME=${REGION}xxx
+EMAIL=xxx@yahoo.com
 
 #
 # Fetch token (which will expire in 12 hours)
 #
 
-TOKEN=`aws ecr --region=$REGION get-authorization-token --output text --query authorizationData[].authorizationToken | base64 -d | cut -d: -f2`
+TOKEN=`xxx --region=$REGION get-authorization-token --output text --query authorizationData[].authorizationToken | base64 -d | cut -d: -f2`
 
 #
 # Create or replace registry secret
